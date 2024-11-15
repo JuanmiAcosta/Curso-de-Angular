@@ -1,0 +1,15 @@
+<h3>Spiderman</h3>
+
+<dl>
+
+  <dt>Name</dt>
+  <dd>{{getName()}}</dd>
+  <dt>Age</dt>
+  <dd>{{getAge()}}</dd>
+  <dt>City</dt>
+  <dd>{{getAddress()}}</dd>
+
+</dl>
+
+<button *ngIf="changedName()" class="btn btn-primary mx-2" (click)="changeName()">Cambiar nombre</button>
+<button *ngIf="changedAge()" class="btn btn-primary" (click)="changeAge()">Cambiar edad</button>
