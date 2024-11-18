@@ -1,0 +1,15 @@
+<h4>Add character</h4>
+<hr>
+<form class="form" (ngSubmit)="emitPersonaje()">
+  <div class="form-group">
+
+    <label for="name" class="m-2">Name</label>
+    <input [(ngModel)]="personajeForm.nombre" type="text" class="form-control m-2" name="nombre" id="nombre" placeholder="Nombre...">
+
+    <label for="power"class="m-2" >Power</label>
+    <input [(ngModel)]="personajeForm.poder" type="number" class="form-control m-2" name="poder" id="poder" placeholder="Poder...">
+
+  </div>
+  <button type="submit" class="btn btn-primary w-100">Add</button>
+  <pre class ="mt-4">{{personajeForm | json}}</pre>
+</form>

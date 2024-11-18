@@ -1,0 +1,16 @@
+<h4>Character list</h4>
+<hr>
+<ul class="list-group">
+
+  <li *ngFor="let personaje of personajesList; let i = index; let isEven = even; let isOdd = odd"
+    class="list-group-item d-flex justify-content-between align-items-center" [ngClass]="{'list-group-item-primary':isEven, 'list-group-item-success':isOdd}">
+    <div>
+      <span> <strong>{{i+1}}.</strong> </span>
+      <strong>Nombre: </strong><span> {{ personaje.nombre }} - </span><strong>Poder :</strong><span> {{ personaje.poder
+        }}</span>
+    </div>
+
+    <button (click)="borrarPersonaje(personaje.id!)" class="btn btn-danger ml-3">x</button>
+
+  </li>
+</ul>
